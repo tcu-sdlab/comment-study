@@ -59,3 +59,5 @@ gem 'devise' #devise本体
 #bootdtrap
 gem 'less-rails' # Railsでlessを使えるようにする。Bootstrapがlessで書かれているため
 gem 'twitter-bootstrap-rails' # Bootstrapの本体
+
+gem 'language_filter'
