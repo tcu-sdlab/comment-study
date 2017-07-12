@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'tweets/index'
+
+  get 'tweets/show'
+
+  get 'tweets/new'
+
+  get 'tweets/fail'
+
+  get 'tweets/success'
+  
+  post 'tweets' => 'tweets#create'
+
   #devise_for :users #  , path_names: { sign_in: "login", sign_out: "logout"}
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
   get 'home/index'
