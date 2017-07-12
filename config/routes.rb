@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   get 'tweets/fail'
 
   get 'tweets/success'
-  
+
+  get 'tweets/admin'
+
+  get 'tweets/403'
+
   post 'tweets' => 'tweets#create'
 
   #devise_for :users #  , path_names: { sign_in: "login", sign_out: "logout"}

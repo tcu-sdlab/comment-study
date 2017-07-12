@@ -10,6 +10,12 @@ class TweetsController < ApplicationController
 
   def new
   end
+
+  def admin
+    if current_user.username != "admin" then
+      redirect_to '/tweets/403'
+    end
+  end
      
   def create
     @tweet = Tweet.new
