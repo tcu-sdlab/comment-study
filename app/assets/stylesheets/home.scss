@@ -7,7 +7,7 @@
 $名前:セットする値;
 */
 $header_height:0%;
-$body_height:900px;
+$body_height:910px;
 $form_content_padding: 5%;
 $field_and_actions_padding:10%;
 
@@ -71,7 +71,7 @@ html,body{
 
 .main_content h2{
   text-align: center;
-  margin: 50px;
+  margin: 30px;
   font-size: 70px;
 
   @media (min-width: 100px) {
@@ -112,9 +112,9 @@ html,body{
   font-size: 20px;
 }
 
-.sign_up_content{
+.sign_up_content,.log_in_content{
   font-size: 18px;
-  padding: 40px;
+  padding: 10px;
 }
 
 .link_content{

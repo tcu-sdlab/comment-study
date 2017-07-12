@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="home.scss">
-  <title>Document</title>
+  <title>Log In</title>
   <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet" />
 </head>
 <body>
@@ -18,13 +18,13 @@
       <div class="form_content">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="field">
-              <%= f.label 'ユーザーネーム' %><br />
+              <%= f.label 'ユーザーネーム' %>
               <%= f.text_field :username, autofocus: true %>
             </div>
 
             <div class="field">
-              <%= f.label 'パスワード' %><br />
-              <%= f.password_field :password, autocomplete: "off" %>
+              <%= f.label 'パスワード' %>
+              <%= f.password_field :password, autocomplete: 'off' %>
             </div>
 
             <% if devise_mapping.rememberable? -%>
@@ -35,18 +35,18 @@
             <% end -%>
 
             <div class="action">
-              <%= f.submit 'ログイン', :class=>"btn btn-default" %>
+              <%= f.submit 'ログイン', :class=>'btn btn-default' %>
             </div>
 
             <div class="sign_up_content">
               <p>はじめてごりようですか？</p>
-              <%= link_to "サインアップ", new_user_registration_path, :class=>'link_content' %>
+              <%= link_to 'サインアップ', new_user_registration_path, :class=>'link_content'  %>
             </div>
 
         <% end %>
 
         <!--<div class="action">-->
-        <!--<%= button_to 'サインアップ', new_user_registration_path, :method=>:get, :class=>"btn btn-default" %>-->
+        <!--<%= button_to 'サインアップ', new_user_registration_path, :method=>:get, :class=>'btn btn-default' %>-->
         <!--</div>-->
 
       </div>
