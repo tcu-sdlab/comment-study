@@ -1,6 +1,7 @@
+<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+
 <%= form_for Tweet.new do |f| %>
 	<%= f.label :content %>
 	<%= f.text_area :content %>
 	<%= f.submit %>
 <% end %>
-<a href="/tweets/admin">管理者はこちら</a>
