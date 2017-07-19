@@ -9,6 +9,9 @@ class TweetsController < ApplicationController
   end
 
   def new
+    if current_user.username == "admin" then
+      redirect_to '/tweets/admin'
+    end
   end
 
   def admin
