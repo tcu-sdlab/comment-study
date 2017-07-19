@@ -38,18 +38,9 @@
 
             <div class="action">
               <%= f.submit 'サインアップ', :class=>'btn btn-default' %>
-
-              <% if notice %>
-                  <div class="error_message">
-                    <p class="alert alert-notice"><%= notice %></p>
-                  </div>
-              <% end %>
-              <% if alert %>
-                  <div class="error_message">
-                    <p class="alert alert-error"><%= alert %></p>
-                  </div>
-              <% end %>
             </div>
+
+            <%= devise_error_messages %>
 
             <div class="log_in_content">
               <p>アカウントをお持ちですか？</p>
