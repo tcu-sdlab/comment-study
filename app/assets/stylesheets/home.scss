@@ -8,7 +8,7 @@ $名前:セットする値;
 */
 $header_height:0%;
 $body_height:910px;
-$form_content_padding: 5%;
+$form_content_padding: 3%;
 $field_and_actions_padding:10%;
 
 /* scss */
@@ -71,7 +71,8 @@ html,body{
 
 .main_content h2{
   text-align: center;
-  margin: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
   font-size: 70px;
 
   @media (min-width: 100px) {
