@@ -118,11 +118,29 @@ html,body{
   font-size: 20px;
 }
 
-.sign_up_content,.log_in_content{
+.sign_up_content, .log_in_content{
   font-size: 18px;
   padding: 10px;
+  margin-top: 20px;
 }
 
 .link_content{
   color: #38b48b;
+}
+
+.error_message{
+  padding: 0.5em 0.5em;
+  margin: 1em 0;
+  border: solid 3px red;/*線*/
+  border-radius: 5px;/*角の丸み*/
+
+  font-weight: bold;
+  color: red;
+  background-color: white;
+  font-size: 14px;
+}
+
+.error_message p{
+  margin: 0px;
+  padding: 0px;
 }
