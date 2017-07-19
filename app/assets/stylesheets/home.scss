@@ -35,7 +35,7 @@ html,body{
   height: 100%;
   margin: 0;
 
-  font-family: "Hannari";
+  font-family: 'Bellefair', serif;
 }
 
 .background_box{
@@ -90,7 +90,13 @@ html,body{
 .field{
   margin: 10px;
   font-size: 20px;
+  //color: black;
   padding: $field_and_actions_padding;
+}
+
+.textfield{
+  color: black;
+  font-family: 'Bellefair', serif;
 }
 
 .check{
