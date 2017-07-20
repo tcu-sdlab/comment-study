@@ -1,2 +1,16 @@
 Welcome Administrator
 <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+<br>
+
+
+<% begin%>
+<% File.open('./config/language_filters/list.yaml') do |file|%>
+<%= file.each_line do |list|%>
+<%= list.delete("(.*|$)") %>
+            <br>
+<%end%>
+
+
+<%end%>
+
+<%end%>

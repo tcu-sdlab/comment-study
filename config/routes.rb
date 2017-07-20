@@ -13,6 +13,10 @@ Rails.application.routes.draw do
 
   get 'tweets/403'
 
+  get 'tweets/admin_add'
+
+  post 'tweets/admin_add' => 'tweets#admin_create'
+
   post 'tweets' => 'tweets#create'
 
   #devise_for :users #  , path_names: { sign_in: "login", sign_out: "logout"}
