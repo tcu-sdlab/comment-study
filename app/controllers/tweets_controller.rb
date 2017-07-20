@@ -24,7 +24,7 @@ class TweetsController < ApplicationController
     file = File.open('./config/language_filters/list.yaml','a+')
     file.puts '.*'+params[:page][:content]+'(.*|$)'
     file.close
-    redirect_to '/tweets/admin_add'
+    redirect_to '/tweets/admin'
   end
      
   def create

@@ -1,16 +1,54 @@
-Welcome Administrator
-<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-<br>
+<!doctype html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+  <title>Administrator</title>
+</head>
+<body>
+<div class="background_box">
+  <div class="content_box">
+
+    <div class="main_content">
+
+      <h2>Welcome Administrator!</h2>
+
+      <div class="form_content">
+
+        <div class="tmp_box">
+          <div class="list">
+            <% begin%>
+                <% File.open('./config/language_filters/list.yaml') do |file|%>
+                    <ul class="list-group" style="list-style-type: none">
+                      <% file.each_line do |list|%>
+                          <li class="list-group-item"><%= list.delete("(.*|$)") %></li>
+                      <% end %>
+                    </ul>
+                <%end%>
+            <%end%>
+          </div>
+
+          <div class="black_list_content">
+            <p>ブラックリストに追加しますか？</p>
+            <%= link_to "ブラックリスト登録", './admin_add', method: :get, class: 'link_content' %>
+          </div>
+
+          <div class="log_out_content">
+            <p>ご利用は終了しましたか？</p>
+            <%= link_to "log out", destroy_user_session_path, method: :delete, class: 'link_content' %>
+          </div>
+
+        </div>
 
 
-<% begin%>
-<% File.open('./config/language_filters/list.yaml') do |file|%>
-<%= file.each_line do |list|%>
-<%= list.delete("(.*|$)") %>
-            <br>
-<%end%>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
-<%end%>
-
-<%end%>
+</body>
+</html>
