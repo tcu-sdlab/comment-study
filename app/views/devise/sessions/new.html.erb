@@ -41,8 +41,15 @@
               <%= f.submit 'ログイン', :class=>'btn btn-default' %>
             </div>
 
+            <% if notice %>
+                <div class="error_message">
+                  <p class="alert alert-notice"><%= notice %></p>
+                </div>
+            <% end %>
             <% if alert %>
-               <p class="alert alert-erroralert alert-danger" role="alert"><%= alert %></p>
+                <div class="error_message">
+                  <p class="alert alert-error"><%= alert %></p>
+                </div>
             <% end %>
 
             <div class="sign_up_content">
