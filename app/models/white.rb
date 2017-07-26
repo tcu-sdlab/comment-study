@@ -1,2 +1,0 @@
-class White < ApplicationRecord
-end

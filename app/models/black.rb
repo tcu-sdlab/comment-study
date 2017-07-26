@@ -1,2 +1,0 @@
-class Black < ApplicationRecord
-end
