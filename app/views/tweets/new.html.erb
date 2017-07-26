@@ -1,7 +1,28 @@
 <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
 
-<%= form_for Tweet.new do |f| %>
-	<%= f.label :content %>
-	<%= f.text_area :content %>
-	<%= f.submit %>
-<% end %>
+    <div class="main_content">
+      <h2>New Tweet</h2>
+
+      <div class="form_content" id="display-block">
+        <%= form_for Tweet.new do |f| %>
+            <div class="field form-group">
+              <%= f.label 'コメント内容' %>
+              <%= f.text_area :content, size: '40x5', autofocus: true, class: 'form-control' %>
+            </div>
+
+            <div class="action">
+              <%= f.submit '投稿', :class=>'btn btn-default' %>
+            </div>
+
+            <div class="log_out_content">
+              <p>ご利用は終了しましたか？</p>
+              <%= link_to "log out", destroy_user_session_path, method: :delete, class: 'link_content' %>
+            </div>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
