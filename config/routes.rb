@@ -15,7 +15,11 @@ Rails.application.routes.draw do
 
   get 'tweets/admin_add'
 
+  get 'tweets/admin_delete'
+
   post 'tweets/admin_add' => 'tweets#admin_create'
+
+  post 'tweets/admin_delete' => 'tweets#admin_destroy'
 
   post 'tweets' => 'tweets#create'
 

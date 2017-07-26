@@ -26,6 +26,27 @@ class TweetsController < ApplicationController
     file.close
     redirect_to '/tweets/admin'
   end
+
+  def admin_destroy
+    file = File.open('./config/language_filters/list.yaml', 'r')
+    array = []
+    i = 0
+    file.each_line do |list|
+    array[i] = list
+    i += 1
+    end
+    file.close
+    file = File.open('./config/language_filters/list.yaml', 'w')
+    array.each do |tmp|
+      if !tmp.include?('.*'+params[:page][:content]+'(.*|$)')
+        file.puts tmp
+      end
+    end
+    file.close
+    redirect_to '/tweets/admin'
+  end
+
+
      
   def create
     @tweet = Tweet.new
