@@ -55,6 +55,7 @@ class TweetsController < ApplicationController
     @tweet.save
     @no_space_content = @tweet.content.gsub(" ", "")
     @no_space_content = @tweet.content.gsub("　", "")
+    @no_space_content += "aa"
     #filtering
     filepath = "/config/language_filters/list.yaml"
     #filepath.force_encoding('UTF-8') filepath = filepath.encode('UTF-8', 'UTF-8')
