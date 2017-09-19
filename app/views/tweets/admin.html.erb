@@ -13,6 +13,8 @@
 
     <div class="main_content">
 
+      <h2>Welcome Administrator!</h2>
+
 
       <div class="form_content">
 
@@ -32,6 +34,11 @@
           <div class="black_list_content">
             <p>ブラックリストに追加しますか？</p>
             <%= link_to "ブラックリスト登録", './admin_add', method: :get, class: 'link_content' %>
+          </div>
+
+          <div class="delete_content">
+            <p>ブラックリストの要素を削除しますか？(工事中)</p>
+            <%= link_to "ブラックリストから削除", './admin_add', method: :get, class: 'link_content' %>
           </div>
 
           <div class="log_out_content">
