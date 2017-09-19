@@ -84,6 +84,7 @@ html,body{
   font-size: 20px;
   //color: black;
   padding: $field_and_actions_padding;
+  text-align: center;
 }
 
 .textfield{
@@ -110,11 +111,11 @@ html,body{
   font-size: 20px;
 }
 
-.sign_up_content, .log_in_content, .log_out_content, .black_list_content{
+.sign_up_content, .log_in_content, .log_out_content, .black_list_content, .delete_content{
 
   font-size: 18px;
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .link_content{
@@ -123,10 +124,10 @@ html,body{
 
 .list{
   overflow: auto;
-  height: 500px;
+  height: 350px;
   line-height: 1.5;
   padding: 10px 0;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
   color: black;
 }
 
