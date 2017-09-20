@@ -1,1 +1,27 @@
-えっち……///
+<!doctype html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Failed</title>
+
+
+</head>
+<body>
+<div class="fail_box"></div>
+
+<script type="text/javascript">
+  window.onload = function() {
+      if(window.confirm('入力内容が不適切だったため送信に失敗しました。投稿画面に戻りますか？')){
+          location.href = "new";
+      }else{
+              window.alert('キャンセルされました'); // 警告ダイアログを表示
+//  location.href = "new";
+  }
+  }
+
+</script>
+</body>
+</html>
