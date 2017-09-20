@@ -1,5 +1,55 @@
-<%= form_tag('./admin_delete') do %>
-    <%= label :page, :content %>
-    <%= text_area :page, :content %>
-    <%= submit_tag '削除' %>
-<% end %>
+<!doctype html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+  <title>Admin delete</title>
+</head>
+<body>
+<div class="background_box">
+  <div class="content_box">
+
+    <div class="main_content">
+      <h2>Add to blacklist</h2>
+
+      <div class="form_content" >
+        <div class="tmp_box">
+          <%= form_tag('./admin_delete') do %>
+              <div class="field form-group">
+                <%= label :page, :content %>
+                <%= text_field :page, :content, :class=>'textfield' %>
+
+              </div>
+
+              <div class="action">
+                <%= submit_tag '削除', :class=>'btn btn-default' %>
+              </div>
+
+          <% end %>
+
+          <div class="black_list_content">
+            <p>Adminのホームに戻りますか？</p>
+            <%= link_to "Admin Home", './admin', method: :get, class: 'link_content' %>
+          </div>
+
+          <div class="log_out_content">
+            <p>ご利用は終了しましたか？</p>
+            <%= link_to "log out", destroy_user_session_path, method: :delete, class: 'link_content' %>
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+</div>
+</body>
+</html>
